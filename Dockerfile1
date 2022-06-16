@@ -1,0 +1,8 @@
+#FROM centos:centos7.9.2009
+from ubuntu:18.04
+
+#RUN mkdir /home
+WORKDIR /home
+COPY command.sh /home
+RUN chmod +x ./command.sh
+RUN ./command.sh -x -f ./
